@@ -211,12 +211,7 @@ export default function WeatherSearchApp() {
       <SafeAreaView style={styles.safeArea}>
         {/* Search Bar */}
         <View style={styles.searchContainer}>
-          <View
-            style={[
-              styles.searchBar,
-              { backgroundColor: "rgba(255, 255, 255, 0.2)" },
-            ]}
-          >
+          <View style={[styles.searchBar]}>
             <Ionicons
               name="search"
               size={20}
@@ -362,7 +357,7 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     paddingHorizontal: 24,
-    paddingTop: 20,
+    paddingTop: 40,
   },
   searchContainer: {
     marginBottom: 20,
@@ -371,11 +366,10 @@ const styles = StyleSheet.create({
   searchBar: {
     flexDirection: "row",
     alignItems: "center",
-    borderRadius: 16,
     paddingHorizontal: 16,
     paddingVertical: 12,
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.3)",
+    borderBottomColor: "rgba(255, 255, 255, 0.15)",
+    borderBottomWidth: 1, // ← fondamentale
   },
   searchIcon: {
     marginRight: 10,
@@ -383,7 +377,7 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     flex: 1,
-    fontSize: 16,
+    fontSize: 18,
     fontFamily: "Inter-Medium",
   },
   clearButton: {
